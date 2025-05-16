@@ -1,0 +1,53 @@
+@import "tailwindcss";
+
+@theme {
+  /* Color Palette */
+  --color-primary: #e9ebdf; /* Light background/primary accent */
+  --color-secondary: #151515; /* Dark primary text/background */
+  --color-tertiary: #242424; /* Medium dark accents */
+  --color-border-color: #e9ebf333; /* Semi-transparent border */
+
+  /* Typography */
+  --font-display: sans-serif; /* Fallback display font */
+
+  /* Font Sizes */
+  --text-3xl: 2rem; /* 32px */
+  --text-2xl: 1.5rem; /* 24px */
+  --text-xl: 1.25rem; /* 20px */
+  --text-lg: 1rem; /* 16px */
+  --text-base: 0.775rem; /* ~12.4px */
+
+  /* Line Heights */
+  --leading-2xl: 1.5; /* 150% */
+  --leading-xl: 0.96; /* 96% */
+
+  /* Font Weights */
+  --weight-light: 200;
+  --weight-regular: 300;
+  --weight-medium: 500;
+  --weight-semibold: 600;
+  --weight-bold: 700;
+}
+
+@layer base {
+  /* Headings */
+  h1 {
+    font-size: var(--text-3xl);
+    line-height: var(--leading-xl);
+    font-weight: var(--weight-regular);
+  }
+
+  /* Paragraphs */
+  p {
+    font-weight: var(--weight-regular);
+    font-size: var(--text-xl);
+    line-height: var(--leading-2xl);
+  }
+
+  /* Inline Text */
+  span {
+    font-weight: var(--weight-regular);
+    font-size: var(--text-base);
+    line-height: var(--leading-2xl);
+  }
+}
