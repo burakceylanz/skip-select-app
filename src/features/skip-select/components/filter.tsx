@@ -30,7 +30,7 @@ export default function Filter({ onFilterChange }: FilterProps) {
   }, [hirePeriod, filterType, onFilterChange]);
 
   return (
-    <div className="py-1.5 sm:py-6 px-12 text-white flex flex-col sm:flex-row items-center gap-4 justify-between">
+    <div className="py-1.5 sm:py-2 px-12 text-white flex flex-col sm:flex-row items-center gap-4 justify-between">
       {/* Hire Period Select */}
       <div className="w-full sm:w-auto flex flex-col">
         <label htmlFor="hire-period" className="text-sm mb-1">
@@ -38,7 +38,7 @@ export default function Filter({ onFilterChange }: FilterProps) {
         </label>
         <select
           id="hire-period"
-          className="bg-secondary border border-border-color rounded px-3 py-2 outline-none"
+          className="w-full sm:w-48 bg-secondary border border-border-color rounded px-3 py-2 outline-none"
           value={hirePeriod ?? ""}
           onChange={(e) => {
             const val = e.target.value;
@@ -60,7 +60,7 @@ export default function Filter({ onFilterChange }: FilterProps) {
         </label>
         <select
           id="filter-type"
-          className="bg-secondary border border-border-color rounded px-3 py-2 outline-none"
+          className="w-full sm:w-48 bg-secondary border border-border-color rounded px-3 py-2 outline-none"
           value={filterType}
           onChange={(e) =>
             setFilterType(e.target.value as FilterValues["filterType"])
