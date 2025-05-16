@@ -116,7 +116,7 @@ src/
 ## Core Concepts
 
 * **Provider Setup**: In `main.tsx`, wraps `<App />` with Redux `Provider` and React Query `QueryClientProvider`.
-* **Routing**: `App.tsx` uses `createBrowserRouter` for two routes: `/` (SkipSelectPage) and `*` (NotFoundPage) citeturn0file0.
+* **Routing**: `App.tsx` uses `createBrowserRouter` for two routes: `/` (SkipSelectPage) and `*` (NotFoundPage).
 * **Global Styles**: Tailwind base imported in `main.tsx` and theme variables in `index.css` (`@theme` custom properties).
 
 ---
@@ -141,14 +141,14 @@ src/
 ## State Management
 
 * **Redux Slice**: `skipSelectSlice` manages only `selectedSkip`
-* Actions and selectors via `useAppDispatch` / `useAppSelector` hooks.
+* Actions and selectors via `useAppSelector` hooks.
 
 ---
 
 ## API Integration
 
 * **apiClient**: Axios instance with `baseURL`, `timeout`, and JSON headers in `common/services/apiClient.ts`.
-* **getSkips**: Fetcher using `apiClient.get('/api/skips/by-location?postcode=NR32&area=Lowestoft')`, returns data array citeturn7231skip-select-service.
+* **getSkips**: Fetcher using `apiClient`, returns data skips.
 
 ---
 
